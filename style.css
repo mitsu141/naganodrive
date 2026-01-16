@@ -1,56 +1,75 @@
+/* 全体リセット */
 * {
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-body {
   margin: 0;
-  background: linear-gradient(#e8f5e9, #ffffff);
-  color: #2e3d2f;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* 背景 */
+body {
+  background: #f5f7f6;
+  color: #333;
+}
+
+/* ヘッダー */
 header {
+  background: #1f3d2b;
+  color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 16px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+/* コンテナ */
 .container {
-  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+/* カード（押せるやつ） */
 .card {
   background: white;
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  padding: 20px;
   text-align: center;
-  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.1s ease;
 }
 
-.card:hover {
-  transform: scale(1.02);
-}
-
+/* リンク化 */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* タップ時 */
+.card:active {
+  transform: scale(0.97);
+}
+
+/* iframe（地図） */
 iframe {
   width: 100%;
-  height: 300px;
+  height: 60vh;
   border-radius: 12px;
   border: none;
 }
 
+/* URL表示 */
 .url-box {
-  background: #f1f1f1;
-  padding: 0.8rem;
-  border-radius: 8px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
   font-size: 0.9rem;
+  line-height: 1.4;
   word-break: break-all;
-  margin-top: 0.5rem;
 }
+
